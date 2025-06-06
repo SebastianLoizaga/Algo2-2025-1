@@ -4,6 +4,8 @@ import animal.*;
 import auxiliar.Color;
 import auxiliar.Persona;
 
+//esto es una prueba para git y github.
+
 class Primera {
     public static int valor=5; // atributo de clase.
     
