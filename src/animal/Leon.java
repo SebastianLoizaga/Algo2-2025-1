@@ -1,35 +1,12 @@
 package animal;
 
-public class Leon {
-    private String nombre;
-    private int edad;
+public class Leon extends Animal{
     private int potenciaRugido;
 
     public Leon(String nombre, int edad, int potenciaRugido){
         //se crea un Leon originalmente como instancia de Object (superclase) con el constructor sin parametros
-        this.nombre = nombre;
-        this.edad = edad;
+        super(nombre, edad);
         this.potenciaRugido = potenciaRugido;
-    }
-
-    public String obtenerNombre(){
-        return this.nombre;
-    }
-
-    public void modificarNombre(String valor){
-        this.nombre = valor;
-    }
-
-    public void modificarEdad(int valor){
-        this.edad = valor;
-    }
-
-    public int obtenerEdad(){
-        return this.edad;
-    }
-
-    public void cumplirAnios(int cantidad){
-        this.edad = edad + cantidad;
     }
 
     public void modificarPotenciaRugido(int valor){
@@ -38,6 +15,10 @@ public class Leon {
 
     public int obtenerPotenciaRugido(){
         return this.potenciaRugido;
+    }
+    
+    public void cumplirAnios(int cantidad){
+        this.edad = edad + cantidad;
     }
 
     public String toString(){

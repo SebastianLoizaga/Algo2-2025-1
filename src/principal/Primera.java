@@ -103,6 +103,7 @@ class Primera {
         //l4.modificarNivelComprensionChino(7); //no lo permite porque l4 es de tipo super clase Leon y el motodo es de tipo clase LeonAsiatico.
         System.out.println(l4.toString());
         //System.out.println(l4.equals(new Ciudad("Rio Grande",25000))); //FALTA COPIAR EL equals DEL PROYECTO DEL CAMPUS
+        Animal j1 = new Jirafa("Jira Jira", 13, 11);
         
     }
 

@@ -19,4 +19,8 @@ public class LeonAsiatico extends Leon {
     public String toString(){
         return "Nombre: " + this.obtenerNombre() + " // Edad: " + this.obtenerEdad() + " // Potencia rugido: " + this.obtenerPotenciaRugido() + " // Nivel chino: " + this.obtenerNivelComprensionChino();
     }
+
+    public void cumplirAnios(int cantidad){
+        this.edad = edad + cantidad;
+    }
 }
