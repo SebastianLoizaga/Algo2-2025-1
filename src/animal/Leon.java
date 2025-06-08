@@ -18,14 +18,16 @@ public class Leon extends Animal{
     }
     
     public void cumplirAnios(int cantidad){
-        this.modificarEdad(this.obtenerEdad() * cantidad);
+        this.modificarEdad(this.obtenerEdad() + (cantidad /2));
     }
 
     public String toString(){
         return "Nombre: " + this.obtenerNombre() + " // Edad: " + this.obtenerEdad() + " // Potencia rugido: " + this.obtenerPotenciaRugido();
     }
 
-    /* public boolean equals(Object obj){
-
-    } */ //CUANDO LO SUBA COPIARLO
+    public boolean equals(Object obj){
+        return (this.obtenerNombre().equals(((Leon) obj).obtenerNombre())) &&
+    		(this.obtenerEdad() == (((Leon) obj).obtenerEdad())) && 
+            (this.obtenerPotenciaRugido() == (((Leon) obj).obtenerPotenciaRugido()));
+    }
 }

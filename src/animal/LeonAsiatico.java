@@ -17,7 +17,9 @@ public class LeonAsiatico extends Leon {
     }
 
     public String toString(){
-        return "Nombre: " + this.obtenerNombre() + " // Edad: " + this.obtenerEdad() + " // Potencia rugido: " + this.obtenerPotenciaRugido() + " // Nivel chino: " + this.obtenerNivelComprensionChino();
+        return super.toString() + " // Nivel chino: " + this.obtenerNivelComprensionChino();
+        /* super.toString() llama al toString de la superclase. 
+        Si llamo a this.toString entra en bucle y se rompe por llamarse a si mismo infinita veces */
     }
 
     public void cumplirAnios(int cantidad){

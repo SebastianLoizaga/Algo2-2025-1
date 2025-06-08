@@ -3,10 +3,10 @@ package principal;
 import animal.*;
 import auxiliar.Color;
 import auxiliar.Persona;
+import java.util.ArrayList;
 
 class Primera {
     public static int valor=5; // atributo de clase.
-    
     public static void main(String[] args) {
         String s;
         s="Hola mundo!!!";
@@ -34,12 +34,8 @@ class Primera {
         int valor = imprimirNumero("j", Primera.valor, 20, 2);
         System.out.println(valor);
         Primera.valor=Primera.valor+2;
-        /* while (j<=20){
-            System.out.println("j vale: "+j);
-            j=j+2;
-        } */
         System.out.println(imprimirNumero ("k",Primera.valor, 40, 1));
-        //Segunda.metodoVisualizador(56, "el valor de cincuenta y seis");
+        Segunda.metodoVisualizador(56, "el valor de cincuenta y seis");
         Ciudad c = new Ciudad("Rosario");
         System.out.println("---------------------");
         c.mostrar();
@@ -47,17 +43,12 @@ class Primera {
         Ciudad bsas = new Ciudad("Buenos Aires", 1200000);
         bsas.mostrar();
         System.out.println("---------------------");
-        c.setearNombre("Buenos Aires");
-        c.setearCantHabitantes(3000000);
-        c.mostrar();
         c.setearCantHabitantes(c.obtenerCantHabitantes()*2);
         System.out.println("Nueva cant de habitantes de c: " + c.obtenerCantHabitantes());
         Ciudad tuc = new Ciudad("Tucuman");
         System.out.println("---------------------");
         tuc.mostrar();
         System.out.println("---------------------");
-        //System.out.println(tuc.convertirAString());
-        //System.out.println(tuc.toString()); //el toString() de un objeto muestra la identidad del objeto.
         System.out.println(tuc); // llama automaticamente al toString() del objeto.
         String s2 = "hola";
         System.out.println(s2);
@@ -68,8 +59,8 @@ class Primera {
         System.out.println(i3);
         invocar(tuc);
         System.out.println(tuc);
-        Persona p = new Persona("Juan",25,tuc,Color.ROJO);
-        Persona p2 = new Persona("Laura",25,new Ciudad("Bahia Blanca", 500000),Color.ROJO);
+        //Persona p = new Persona("Juan",25,tuc);
+        final Persona p2 = new Persona("Laura",25,new Ciudad("Bahia Blanca", 500000),Color.ROJO);
         System.out.println(p2);
         int ii = 6;
         Integer ii2 = ii; //clases WRAPPERS
@@ -102,9 +93,27 @@ class Primera {
         alterarLeon(l4,"Leon IV");
         //l4.modificarNivelComprensionChino(7); //no lo permite porque l4 es de tipo super clase Leon y el motodo es de tipo clase LeonAsiatico.
         System.out.println(l4.toString());
-        //System.out.println(l4.equals(new Ciudad("Rio Grande",25000))); //FALTA COPIAR EL equals DEL PROYECTO DEL CAMPUS
+        System.out.println(l4.equals(la));
+        LeonAsiatico laa = new LeonAsiatico("Claurencio", 15, 8, 0);
         Animal j1 = new Jirafa("Jira Jira", 13, 11);
-        
+        j1.cumplirAnios(5);
+        System.out.println("Edad de la jirafa: " + j1.obtenerEdad());
+        j1 = new Leon("Lionel",3,70);
+        j1.cumplirAnios(8);
+        System.out.println("Edad de la leon: " + j1.obtenerEdad());
+        Animal j2 = new LeonAsiatico("Liones Chino", 5, 70, 3);
+        System.out.println("Edad del leon Liones Chino: " + j2.obtenerEdad());
+        System.out.println(j2.toString());
+        ArrayList aa = new ArrayList();
+        aa.add(new Ciudad("Salta",2352354));
+        aa.add(7);
+        aa.add(j2);
+        System.out.println(aa.size()); //size cantidad de elementos de la lista
+        Object ccc = aa.get(0); //get devuelte un object.
+        System.out.println(ccc.toString());
+        System.out.println(((Ciudad) ccc).obtenerCantHabitantes());
+        Object ii3 = aa.get(1);
+        System.out.println(((Integer) ii3) * 2);
     }
 
     private static void alterarLeon(Leon l,String valor) {
