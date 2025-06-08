@@ -114,6 +114,10 @@ class Primera {
         System.out.println(((Ciudad) ccc).obtenerCantHabitantes());
         Object ii3 = aa.get(1);
         System.out.println(((Integer) ii3) * 2);
+        ArrayList<Ciudad> aa2 = new ArrayList<Ciudad>();
+        aa2.add(new Ciudad("Salta",2352354));
+        // aa2.add(7);
+        // aa2.add(j2); //esto no se puede porque declare que la lista es de Ciudad y no son de la clase Ciudad.
     }
 
     private static void alterarLeon(Leon l,String valor) {
