@@ -21,6 +21,6 @@ public class LeonAsiatico extends Leon {
     }
 
     public void cumplirAnios(int cantidad){
-        this.edad = edad + cantidad;
+        this.modificarEdad(this.obtenerEdad() * cantidad);
     }
 }

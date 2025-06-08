@@ -18,7 +18,7 @@ public class Leon extends Animal{
     }
     
     public void cumplirAnios(int cantidad){
-        this.edad = edad + cantidad;
+        this.modificarEdad(this.obtenerEdad() * cantidad);
     }
 
     public String toString(){

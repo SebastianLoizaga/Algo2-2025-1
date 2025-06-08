@@ -14,7 +14,8 @@ public abstract class Animal {
         this.nombre = valor;
     }
 
-    public void modificarEdad(int valor){
+    //protected hace que lo puedan utilizar tambien las subclases.
+    protected void modificarEdad(int valor){
         this.edad = valor;
     }
 
@@ -26,5 +27,5 @@ public abstract class Animal {
         return this.edad;
     }
 
-    abstract public void cumplirAnios(int cantidad);
+    abstract public void cumplirAnios(int cantidad); //sus subclases tienen que desarrollar el metodo.
 }
