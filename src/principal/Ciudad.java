@@ -35,6 +35,6 @@ public class Ciudad {
     }
 
     public String toString(){
-        return "Nombre: " + this.obtenerNombre() + " // Cant de habitantes de c: " + this.obtenerCantHabitantes();
+        return "Nombre: " + this.obtenerNombre() + " // Cant de habitantes: " + this.obtenerCantHabitantes();
     } // modifica el toString() generico para hacerlo especifico para el objeto.
 }

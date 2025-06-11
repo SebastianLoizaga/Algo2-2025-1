@@ -4,6 +4,8 @@ import animal.*;
 import auxiliar.Color;
 import auxiliar.Persona;
 import java.util.ArrayList;
+import java.util.HashMap;
+import maybe.Maybe;
 
 class Primera {
     public static int valor=5; // atributo de clase.
@@ -104,7 +106,7 @@ class Primera {
         Animal j2 = new LeonAsiatico("Liones Chino", 5, 70, 3);
         System.out.println("Edad del leon Liones Chino: " + j2.obtenerEdad());
         System.out.println(j2.toString());
-        ArrayList aa = new ArrayList();
+        ArrayList aa = new ArrayList(); //raw types
         aa.add(new Ciudad("Salta",2352354));
         aa.add(7);
         aa.add(j2);
@@ -116,8 +118,22 @@ class Primera {
         System.out.println(((Integer) ii3) * 2);
         ArrayList<Ciudad> aa2 = new ArrayList<Ciudad>();
         aa2.add(new Ciudad("Salta",2352354));
-        // aa2.add(7);
+        aa2.add(tuc);
+        aa2.add(bsas);
         // aa2.add(j2); //esto no se puede porque declare que la lista es de Ciudad y no son de la clase Ciudad.
+        HashMap<String, Ciudad> hm = new HashMap<String, Ciudad>();
+        hm.put("Norte", new Ciudad("Salta", 2352354));
+        hm.put("Sur", new Ciudad("Bariloche", 235235));
+        hm.put("Este", new Ciudad("Concepcion del Uruguay", 80000));
+        hm.put("Oeste", new Ciudad("Mendoza", 200000));
+        System.out.println(hm.get("Este"));
+        Maybe<Integer> mnada = new Maybe<Integer>();
+        Maybe<Persona> mAlgoP = new Maybe<>(p2);
+        System.out.println(mAlgoP.getValue().toString());
+        LeonAsiatico la2 = new LeonAsiatico("paco", 2, 2, 4);
+        Animal a = new Jirafa(s2, jj2, i);
+        la2.verificacionParCovContravInv(a);
+        la2.verificacionParCovContravInv(new Elefante(s2, jj2, i));
     }
 
     private static void alterarLeon(Leon l,String valor) {

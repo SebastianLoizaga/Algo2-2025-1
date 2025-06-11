@@ -27,5 +27,9 @@ public abstract class Animal {
         return this.edad;
     }
 
-    abstract public void cumplirAnios(int cantidad); //sus subclases tienen que desarrollar el metodo.
+    public void cumplirAnios(int cantidad){
+        this.modificarEdad(this.obtenerEdad() + this.factorEnvejecimiento() * cantidad);
+    }
+
+    abstract public int factorEnvejecimiento(); //sus subclases tienen que desarrollar el metodo.
 }

@@ -1,5 +1,7 @@
 package animal;
 
+import auxiliar.Persona;
+
 public class LeonAsiatico extends Leon {
     private int nivelComprensionChino;
 
@@ -22,7 +24,16 @@ public class LeonAsiatico extends Leon {
         Si llamo a this.toString entra en bucle y se rompe por llamarse a si mismo infinita veces */
     }
 
-    public void cumplirAnios(int cantidad){
-        this.modificarEdad(this.obtenerEdad() * cantidad);
+    public int factorEnvejecimiento(){
+        return 10;
+    }
+
+    public void verificacionParCovContravInv(Animal e){
+        System.out.println("Ejecucion subclase LeonAsiatico (par).");
+    }
+
+    public Persona verificacionResCovContravInv(){
+        System.out.println("Ejecucion superclase Leon (res).");
+        return new Persona("Juana",null,null);
     }
 }

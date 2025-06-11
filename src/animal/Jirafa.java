@@ -16,7 +16,7 @@ public class Jirafa extends Animal{
         this.longitudCuello = valor;
     }
 
-    public void cumplirAnios(int cantidad){
-        this.modificarEdad(this.obtenerEdad() * cantidad);
+    public int factorEnvejecimiento(){
+        return 3;
     }
 }

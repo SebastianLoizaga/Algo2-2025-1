@@ -12,11 +12,7 @@ public class Elefante extends Animal{
         return this.cantidadMemoria;
     }
 
-    /* public int factorEnvejecimiento(){
-        cuando este la clase lo completo.
-    } */
-
-    public void cumplirAnios(int cantidad){
-        this.modificarEdad(this.obtenerEdad() * cantidad);
+    public int factorEnvejecimiento(){
+        return 5;
     }
 }
