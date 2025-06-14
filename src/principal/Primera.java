@@ -3,8 +3,10 @@ package principal;
 import animal.*;
 import auxiliar.Color;
 import auxiliar.Persona;
+import interfaces.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import maybe.Maybe;
 
 class Primera {
@@ -134,6 +136,36 @@ class Primera {
         Animal a = new Jirafa(s2, jj2, i);
         la2.verificacionParCovContravInv(a);
         la2.verificacionParCovContravInv(new Elefante(s2, jj2, i));
+        //----------------ARRANCA INTERFACES----------------//
+        Volador av = new Avion(70000);
+        //System.out.println(av.obtenerKmRecorridos());
+        av.volar();
+        Volador sup = new Superman();
+        sup.volar();
+        System.out.println("-----------------");
+        hacerVolar(av);
+        hacerVolar(sup);
+        hacerVolar(new Pajaro());
+        List<Integer> aai = new ArrayList<Integer>();
+        aai.add(24);
+        aai.add(48);
+        aai.add(0);
+        System.out.println("-----------------");
+        for(int cant=0; cant<=(aai.size()-1); cant++){
+            System.out.println("Valor: " + aai.get(cant));
+        }
+        System.out.println("-----------------");
+        for (Integer cant1:aai){
+            System.out.println("Valor: " + cant1);
+        }
+        List<Ciudad> aa3 = new ArrayList<Ciudad>();
+        aa3.add(new Ciudad("Bariloche", 235235));
+        aa3.add(new Ciudad("Bariloche", 235235));
+        aa3.add(new Ciudad("Bariloche", 235235));
+        Iterable<Ciudad> it = aa3;
+        for (Ciudad cant2:it){
+            System.out.println("Valor: " + cant2.toString());
+        }
     }
 
     private static void alterarLeon(Leon l,String valor) {
@@ -156,5 +188,9 @@ class Primera {
         //c = new Ciudad("Salta", 1324); // cambio la identidad de c
         c.setearNombre("Salta"); // no cambia la identidad de c
         c.setearCantHabitantes(1234);
+    }
+
+    private static void hacerVolar(Volador v){
+        v.volar();
     }
 }
