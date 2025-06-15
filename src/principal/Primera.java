@@ -3,11 +3,15 @@ package principal;
 import animal.*;
 import auxiliar.Color;
 import auxiliar.Persona;
+import genin.GeneradorEnteros;
 import interfaces.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import maybe.Maybe;
+import mibool.MiBoolFalse;
+import mibool.MiBoolTrue;
 
 class Primera {
     public static int valor=5; // atributo de clase.
@@ -166,6 +170,34 @@ class Primera {
         for (Ciudad cant2:it){
             System.out.println("Valor: " + cant2.toString());
         }
+        //GeneradorEnteros g = new GeneradorEnteros(4, 26, 3);
+        Iterator<Integer> g = new GeneradorEnteros(4, 26, 3);
+        while (g.hasNext()){
+            System.out.println(g.next());
+        }
+        GeneradorEnteros ggg = new GeneradorEnteros(3,62,5);
+        for (Integer int1: new GeneradorEnteros(3,62,5)){
+            System.out.println("Valor for(GeneradorEnteros): " + int1);
+        }
+        ggg.caminar();
+        Superman sup1 = new Superman();
+        sup1.caminar();
+        sup1.trotar();
+        CaminanteLigero cl = sup1;
+        cl.caminar();
+        System.out.println("-----------------");
+        System.out.println("NOT TRUE: " + (new MiBoolTrue()).miBoolNot()); //not true
+        System.out.println("NOT FALSE: " + (new MiBoolFalse()).miBoolNot()); //not false
+        System.out.println("-----------------");
+        System.out.println("TRUE AND TRUE: " + (new MiBoolTrue()).miBoolAnd(new MiBoolTrue())); //true and true
+        System.out.println("TRUE AND FALSE: " + (new MiBoolTrue()).miBoolAnd(new MiBoolFalse())); //true and false
+        System.out.println("FALSE AND TRUE: " + (new MiBoolFalse()).miBoolAnd(new MiBoolTrue())); //false and true
+        System.out.println("FALSE AND FALSE: " + (new MiBoolFalse()).miBoolAnd(new MiBoolFalse())); //false and false
+        System.out.println("-----------------");
+        System.out.println("TRUE OR TRUE: " + (new MiBoolTrue()).miBoolOr(new MiBoolTrue())); //true or true
+        System.out.println("TRUE OR FALSE: " + (new MiBoolTrue()).miBoolOr(new MiBoolFalse())); //true or false
+        System.out.println("FALSE OR TRUE: " + (new MiBoolFalse()).miBoolOr(new MiBoolTrue())); //false or true
+        System.out.println("FALSE OR FALSE: " + (new MiBoolFalse()).miBoolOr(new MiBoolFalse())); //false or false
     }
 
     private static void alterarLeon(Leon l,String valor) {
