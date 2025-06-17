@@ -198,6 +198,7 @@ class Primera {
         System.out.println("TRUE OR FALSE: " + (new MiBoolTrue()).miBoolOr(new MiBoolFalse())); //true or false
         System.out.println("FALSE OR TRUE: " + (new MiBoolFalse()).miBoolOr(new MiBoolTrue())); //false or true
         System.out.println("FALSE OR FALSE: " + (new MiBoolFalse()).miBoolOr(new MiBoolFalse())); //false or false
+        //alisdvliabvliabvibavilbavilbava
     }
 
     private static void alterarLeon(Leon l,String valor) {
